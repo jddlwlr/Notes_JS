@@ -21,14 +21,12 @@ const router = (app) => {
 
         // notes get route
         app.get("/api/notes", function(req, res) {
-            // Read the db.json file and return all saved notes as JSON.
             res.json(notes);
         });
 
 
         // displays notes
         app.get("/api/notes/:id", function(req,res) {
-            // display json for the notes array indices of the provided id
             res.json(notes[req.params.id]);
         });
 
