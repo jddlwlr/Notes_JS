@@ -16,6 +16,7 @@ const router = (app) => {
             let newNote = req.body;
             notes.push(newNote);
             writeDb();
+            console.log('Note Saved!')
             
         });
 
@@ -45,6 +46,7 @@ const router = (app) => {
         app.delete("/api/notes/:id", function(req, res) {
             notes.splice(req.params.id, 1);
             writeDb();
+            console.log('Note Deleted!')
         });
 
         // re-writes db
